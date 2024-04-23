@@ -16,7 +16,7 @@ public class AritmetikIslemOnceligi {
         System.out.print ( "Üçüncü sayıyı giriniz: " );
         c = input.nextInt ();
 
-        result = a + b * c - b;
+        result = a + (b * c) - b;
 
         System.out.println ( "İşlem sonucu: " + result );
     }
