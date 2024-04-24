@@ -9,9 +9,9 @@ public class ChineseZodiac {
         System.out.print ( "Doğum yılınızı giriniz: " );
         int year = input.nextInt ();
 
-        System.out.print ( "Çin Zodyağı Burcunuz: " );
+        System.out.print ( "Çin Zodyağı Burcunuz: " ); // Burç ne çıkacaksa çıksın öncesinde girizgah cümlesini basar.
 
-        switch (year % 12) {
+        switch (year % 12) { // Doğum yılının 12'ye bölümünden kalanı hesaplayarak Çin zodyağı burcunu bulur.
             case 0:
                 System.out.println ( "Maymun" );
                 break;
