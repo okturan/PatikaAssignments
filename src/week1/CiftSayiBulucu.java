@@ -17,7 +17,6 @@ public class CiftSayiBulucu {
         for (int i = 0; i <= x; i++) {
 
             // Bu sayılardan yalnızca 2'ye tam bölünebilenlerini print alıyoruz.
-
             if ( i % 2 == 0 ) {
                 System.out.println ( i );
             }
