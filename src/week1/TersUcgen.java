@@ -3,20 +3,20 @@ package week1;
 import java.util.Scanner;
 
 public class TersUcgen {
-	public static void main ( String[] args ) {
-		Scanner input = new Scanner ( System.in );
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
 
-		System.out.println ( "Ters üçgeniniz kaç basamaklı olsun?: " );
-		int step = input.nextInt ();
+		System.out.println("Ters üçgeniniz kaç basamaklı olsun?: ");
+		int step = input.nextInt();
 
-		while ( step > 0 ) { // Girilen basamaktan başlıyoruz. 1'e inene kadar döngü tekrarlıyor.
+		while (step > 0) { // Girilen basamaktan başlıyoruz. 1'e inene kadar döngü tekrarlıyor.
 
-			// Her basamağın satırında o basamak kere yıldız basıyoruz.
-			for (int star = step; star > 0; star--) {
-				System.out.print ( "*" );
+			// Her basamağın satırında (basamak * 2 - 1) kere yıldız basıyoruz.
+			for (int star = 0; star < 2 * step - 1; star++) {
+				System.out.print("*");
 			}
-			step--;
-			System.out.println (); // Her basamağın sonunda alt satıra geçiyoruz.
+			step--; // Her döngüden sonra basamak sayısını bir azaltıyoruz.
+			System.out.println(); // Her basamağın sonunda alt satıra geçiyoruz.
 		}
 	}
 }
