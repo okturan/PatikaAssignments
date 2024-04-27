@@ -11,6 +11,7 @@ public class EnBuyukEnKucukSayi {
 		// Sayı adedi olarak 0 girilmesin.
 		if ( number <= 0 ) {
 			System.out.println ( "Lütfen geçerli bir sayı adedi giriniz." );
+			return;
 		}
 
 		System.out.print ( "1. sayıyı giriniz: " );
