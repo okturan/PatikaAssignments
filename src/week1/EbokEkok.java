@@ -25,6 +25,7 @@ public class EbokEkok {
 			divisor = remainder; // Kalan sayı sonraki döngü için bölen olarak atanır.
 		}
 
+		// Kalan'ın 0 çıktığı işlemdeki bölünen sayının değeri n1 ve n2'nin en büyük ortak bölenidir.
 		ebob = dividend;
 
 		// Formüle göre EKOK hesaplıyoruz.
