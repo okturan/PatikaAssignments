@@ -12,7 +12,7 @@ public class TersUcgen {
 		while (step > 0) { // Girilen basamaktan başlıyoruz. 1'e inene kadar döngü tekrarlıyor.
 
 			// Her basamağın satırında (basamak * 2 - 1) kere yıldız basıyoruz.
-			for (int star = 0; star < 2 * step - 1; star++) {
+			for (int star = 0; star < ((2 * step) - 1); star++) {
 				System.out.print("*");
 			}
 			step--; // Her döngüden sonra basamak sayısını bir azaltıyoruz.
