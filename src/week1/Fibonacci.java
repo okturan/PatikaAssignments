@@ -5,19 +5,17 @@ import java.util.Scanner;
 public class Fibonacci {
 	public static void main ( String[] args ) {
 		Scanner input = new Scanner ( System.in );
-		int n, fib = 0, ona = 1, cci;
+		System.out.print ( "Fibonacci serisinin eleman sayısını giriniz: " );
+		int n = input.nextInt ();
 
-		// Kullanıcıdan Fibonacci serisinin uzunluğunu girmesini iste
-		System.out.print ( "Fibonacci seriniz kaç elemanlı olsun?: " );
-		n = input.nextInt ();
+		int fib = 0; // İlk Fibonacci sayısı
+		int ona = 1; // İkinci Fibonacci sayısı
+		int cci;     // Hesaplanacak sonraki Fibonacci sayısı
 
-		// İlk iki Fibonacci sayısını yazdır
-		System.out.print ( fib + ", " + ona );
+		for (int i = 1; i <= n; i++) {
+			System.out.print ( fib + " " );
 
-		// Fibonacci serisini hesapla ve yazdır
-		for (int i = 0; i < n; i++) {
-			cci = fib + ona; // Sonraki Fibonacci sayısını hesapla
-			System.out.print ( ", " + cci ); // Sonraki sayıyı yazdır
+			cci = fib + ona; // Fibonacci serisinin bir sonraki elemanını hesapla
 			fib = ona; // Bir sonraki adımda kullanılmak üzere değerleri güncelle
 			ona = cci;
 		}
