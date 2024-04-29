@@ -4,41 +4,61 @@ import java.util.Scanner;
 
 public class UcakBileti {
 	public static void main ( String[] args ) {
-		int distance, age, type;
+		Scanner input = new Scanner ( System.in );
+		int distance, age, travelType;
+		double costPerKm = 0.1, totalCost;
 
 		System.out.println ( "Patika havayollarına hoş geldiniz!\n**********************************" );
 
-		Scanner input = new Scanner ( System.in );
-		System.out.print ( "Mesafeyi km türünden giriniz :" );
-		distance = input.nextInt ();
-		System.out.print ( "Yaşınızı giriniz :" );
-		age = input.nextInt ();
-		System.out.print ( "Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):" );
-		type = input.nextInt ();
+		do {
+			System.out.print ( "Gideceğiniz mesafeyi KM cinsinden giriniz: " );
+			distance = input.nextInt ();
 
-		// Geçerli veri kontrolü
-		if ( distance <= 0 || age <= 0 || (type != 1 && type != 2) ) {
-			System.out.println ( "Hatalı Giriş Yaptınız!" );
-			return;
+			// Mesafe sıfır veya negatifse hata mesajı gösteriliyor.
+			if ( distance <= 0 ) {
+				System.out.println ( "Hatalı veri girdiniz!" );
+			}
+		} while ( distance <= 0 );
 
-		}
-		double total = (distance * 0.10);
-		// Yaş indirimi
+		do {
+			System.out.print ( "Yaşınızı giriniz: " );
+			age = input.nextInt ();
+
+			// Yaş sıfır veya negatifse hata mesajı gösteriliyor.
+			if ( age <= 0 ) {
+				System.out.println ( "Hatalı veri girdiniz!" );
+			}
+		} while ( age <= 0 );
+
+		do {
+			System.out.println ( "Yolculuk tipinizi seçiniz:\n" + "1. Tek Yön\n" + "2. Gidiş-Dönüş\n" );
+			System.out.print ( "Seçiminiz: " );
+			travelType = input.nextInt ();
+
+			// Seçilen yolculuk tipi geçerli değilse hata mesajı gösteriliyor.
+			if ( travelType != 1 && travelType != 2 ) {
+				System.out.println ( "Hatalı veri girdiniz!" );
+			}
+		} while ( travelType != 1 && travelType != 2 );
+
+		// Toplam maliyet hesaplanıyor.
+		totalCost = distance * costPerKm;
+
+		// Yaşa göre indirimler uygulanıyor.
 		if ( age < 12 ) {
-			total -= (total * 0.50);
-
-		} else if ( age >= 12 && age <= 24 ) {
-			total -= (total * 0.10);
-
+			totalCost *= 0.5;
+		} else if ( age < 24 ) {
+			totalCost *= 0.9;
 		} else if ( age > 65 ) {
-			total -= (total * 0.30);
-
-		}
-		// Gidiş-Dönüş indirimi
-		if ( type == 2 ) {
-			total -= (total * 0.20);
+			totalCost *= 0.7;
 		}
 
-		System.out.println ( "Toplam Tutar:" + (type == 2 ? total * 2 : total) + "TL" );
+		// Gidiş-dönüş seyahatler için ek indirim uygulanıyor.
+		if ( travelType == 2 ) {
+			totalCost *= 0.8;
+			totalCost *= 2; // Gidiş dönüş olduğu için ikiyle çarpılıyor
+		}
+
+		System.out.println ( "Toplam tutar: " + totalCost + " ₺" );
 	}
 }
