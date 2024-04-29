@@ -2,7 +2,7 @@ package week1;
 
 import java.util.Scanner;
 
-public class UcakBileti {
+public class UcakBiletiV2 {
 	public static void main ( String[] args ) {
 		Scanner input = new Scanner ( System.in );
 		int distance, age, travelType;
