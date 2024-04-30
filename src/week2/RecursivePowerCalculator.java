@@ -16,9 +16,11 @@ public class RecursivePowerCalculator {
 		System.out.println ( base + "^" + exponent + " = " + calculatePower ( base, exponent ) );
 	}
 
-	public static int calculatePower ( int base, int exponent ) {
+	public static double calculatePower ( int base, int exponent ) {
 		if ( exponent == 0 ) {
 			return 1;
+		} else if ( exponent < 0 ) {
+			return 1 / calculatePower ( base, -exponent );
 		}
 
 		/*
