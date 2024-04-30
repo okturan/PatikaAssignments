@@ -43,7 +43,7 @@ public class RecursivePowerCalculator {
 							V
 							2 * 1 (demin metodu 0'la çağırdığımız için yukarıdaki if bloğu 1 veriyor)
 
-		- Metodumuz toplamda 5 kere çağrıldı ve sonuncunun return'ü 1 olduğu için çarpıma etki etmedi.
+	    - Metodumuz toplamda 5 kere çağrıldı ve sonuncunun return'ü 1 olduğu için çarpıma etki etmedi.
 	    - Bu metodlar zincirleme çalıştığı için sonuncudaki return 1'i alarak önceki çağrıdaki 2 ile çarparak geri döner.
 	    - Main çağrısına kadar geri geri devam eder ve sonucu println çağrımızın içine yansıtır.
 	    - Yani aslında gerçek sırasıyla yapılan işlem 1 * 2 * 2 * 2 * 2 oluyor.
