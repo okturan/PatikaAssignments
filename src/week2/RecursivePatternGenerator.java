@@ -17,7 +17,7 @@ public class RecursivePatternGenerator {
 
 		if (number > 0) {
 			printSymmetricSequence ( number - 5 ); // Fonksiyonu sayıyı 5 azaltarak kendini çağırır.
-			System.out.print ( number + " " ); // Geriye sardığında o sıradaki sayı kaç ise onu yazdırır.
+			System.out.print ( number + " " ); // Geriye sardığında üst satırdaki metodu çağırdığındaki sayı kaç ise onu yazdırır.
 		}
 	}
 }
