@@ -10,6 +10,7 @@ public class Book implements Comparable<Book> {
 	private final String authorName;
 	private final int publicationYear;
 
+	// Constructor
 	public Book (String name, int pageCount, String authorName, int publicationYear) {
 		this.name = name;
 		this.pageCount = pageCount;
@@ -47,6 +48,7 @@ public class Book implements Comparable<Book> {
 		}
 	};
 
+	// Overriding the default toString method so we don't need to for-each when we need to print books in the future.
 	@Override
 	public String toString() {
 		return String.format("%-40s %-20s %-30s %-15s",
@@ -66,19 +68,19 @@ public class Book implements Comparable<Book> {
 
 		// TreeSet to store books sorted by name (A-Z)
 		Set<Book> booksByName = new TreeSet<>();
+		// TreeSet to store books sorted by page count
+		Set<Book> booksByPageCount = new TreeSet<>(pageCountComparator);
+
 		booksByName.add(book1);
 		booksByName.add(book2);
 		booksByName.add(book3);
 		booksByName.add(book4);
 		booksByName.add(book5);
 
-		System.out.println("Books sorted by name (A-Z):");
+		System.out.println("\nBooks sorted by name (A-Z):");
 		for (Book book : booksByName) {
 			System.out.println(book);
 		}
-
-		// TreeSet to store books sorted by page count
-		Set<Book> booksByPageCount = new TreeSet<>(pageCountComparator);
 
 		// Transfer books from booksByName to booksByPageCount
 		booksByPageCount.addAll(booksByName);
