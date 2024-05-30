@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals/assignment1.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals/assignment2.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals2/assignment5.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals2/assignment6.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals2/assignment7.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals2/assignment8.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals3/assignment10.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals3/assignment11.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals3/assignment9.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/week5/sqlfundamentals4/assignment12.sql" dialect="PostgreSQL" />
+  </component>
+</project>
