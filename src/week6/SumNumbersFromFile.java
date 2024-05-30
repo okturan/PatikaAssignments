@@ -17,10 +17,10 @@ public class SumNumbersFromFile {
 			// Wrap the FileReader with a BufferedReader for efficient reading
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-			// Read each line from the file until the end
-			while ((bufferedReader.readLine()) != null) {
-				// Step 7: Convert the line to an integer and add it to the total sum
-				int currentNumber = Integer.parseInt(bufferedReader.readLine());
+			String line;
+			while ((line = bufferedReader.readLine()) != null) {
+				// Convert the line to an integer and add it to the total sum
+				int currentNumber = Integer.parseInt(line);
 				totalSum += currentNumber;
 			}
 		} catch (IOException ioException) {
