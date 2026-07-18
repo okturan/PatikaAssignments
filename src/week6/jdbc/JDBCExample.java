@@ -5,9 +5,20 @@ import java.sql.*;
 public class JDBCExample {
 
 	// Database connection details
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/company";
-	private static final String JDBC_USER = "root";
-	private static final String JDBC_PASSWORD = "mysql";
+	private static final String JDBC_URL = System.getenv().getOrDefault(
+			"PATIKA_JDBC_URL",
+			"jdbc:mysql://localhost:3306/company"
+	);
+	private static final String JDBC_USER = requiredEnvironment("PATIKA_JDBC_USER");
+	private static final String JDBC_PASSWORD = requiredEnvironment("PATIKA_JDBC_PASSWORD");
+
+	private static String requiredEnvironment(String name) {
+		String value = System.getenv(name);
+		if (value == null || value.isBlank()) {
+			throw new IllegalStateException(name + " must be set before running the JDBC exercise");
+		}
+		return value;
+	}
 
 	public static void main (String[] args) {
 		// SQL query to drop the employees table if it exists
